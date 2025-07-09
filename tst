@@ -11,7 +11,7 @@ def main():
     output_folder = "cards"
     os.makedirs(output_folder, exist_ok=True)
 
-    for i in range(1, 11):
+    for _ in range(10):
         selected_skills = random.sample(SKILLS, 3)
         converted_skills = []
 
