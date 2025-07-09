@@ -2,7 +2,7 @@ import os
 import random
 from faker import Faker
 import file_operations
-from letters_mapping import LETTERS_MAPPING 
+from letters_mapping import letters_mapping 
 from skills import SKILLS
 
 
@@ -16,7 +16,7 @@ def main():
         converted_skills = []
 
         for skill in selected_skills:
-            new_text = ''.join(LETTERS_MAPPING.get(char, char) for char in skill)
+            new_text = ''.join(letters_mapping.get(char, char) for char in skill)
             converted_skills.append(new_text)
 
         context = {
